@@ -8,392 +8,118 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 30px 15px;
 }
 
 .container {
-  position: relative;
-  width: 90%;
-  height: 94%;
+  width: 100%;
+  max-width: 1300px;
+  padding: 30px;
   background-color: #fcd3a7;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.card {
+  flex: 1 1 480px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.card h2 {
+  font-size: 28px;
+  color: #620909;
+}
+
+.items {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
   gap: 20px;
 }
 
-.container h1 {
-  font-size: 28px;
-  color: #620909;
-  position: absolute;
-  top: 40px;
-  left: 80px;
-}
-
-.container .tools {
-  font-size: 28px;
-  color: #620909;
-  position: absolute;
-  top: 40px;
-  left: 740px;
-}
-
-.container .card {
-  position: absolute;
-  top: 100px;
-  left: 50px;
-  background: rgba(255, 255, 255, 0.5);
-  width: 43%;
-  height: 80%;
-  border-radius: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.container .card img {
-  margin: 0 8px;
-  position: absolute;
-  left: 20px;
-}
-
-.container .card .skill-items {
-  position: relative;
-}
-
-.container .card .skill-items:nth-child(1) .html {
-  width: 70px;
-  position: absolute;
-  top: 16px;
-}
-
-.container .card .skill-items:nth-child(1) .dots {
-  position: absolute;
-  top: 30px;
-  left: 300px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card .skill-items:nth-child(1) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card .skill-items:nth-child(1) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
-}
-
-.container .card .skill-items:nth-child(2) .css {
-  width: 70px;
-  position: absolute;
-  top: 98px;
-  left: -274px;
-}
-
-.container .card .skill-items:nth-child(2) .dots {
-  position: absolute;
-  top: 110px;
-  left: 6px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card .skill-items:nth-child(2) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card .skill-items:nth-child(2) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
-}
-
-.container .card .skill-items:nth-child(3) .js {
-  width: 70px;
-  position: absolute;
-  top: 4px;
-}
-
-.container .card .skill-items:nth-child(3) .dots {
-  position: absolute;
-  top: 20px;
-  left: 300px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card .skill-items:nth-child(3) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card .skill-items:nth-child(3) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
-}
-
-.container .card .skill-items:nth-child(4) .tailwind {
-  width: 70px;
-  position: absolute;
-  top: 90px;
-  left: -274px;
-}
-
-.container .card .skill-items:nth-child(4) .dots {
-  position: absolute;
-  top: 110px;
-  right: 58px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card .skill-items:nth-child(4) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card .skill-items:nth-child(4) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
-}
-
-.container .card .skill-items:nth-child(5) .git {
+.item img {
   width: 60px;
-  position: absolute;
-  top: -4px;
-  left: 25px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
-.container .card .skill-items:nth-child(5) .dots {
-  position: absolute;
-  top: 10px;
-  left: 300px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
+.name {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #620909;
+}
+
+.dots {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 8px;
+  width: 170px;
+  height: 30px;
+  flex-shrink: 0;
+  background: rgba(250, 250, 250, 0.6);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
   transition: all 0.3s ease;
 }
 
-.container .card .skill-items:nth-child(5) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card .skill-items:nth-child(5) .dots .dot {
+.dot {
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background: #87f481;
 }
 
-.container .card .skill-items:nth-child(6) .github {
-  width: 70px;
-  position: absolute;
-  top: 80px;
-  left: -275px;
-}
-
-.container .card .skill-items:nth-child(6) .dots {
-  position: absolute;
-  top: 100px;
-  left: 7px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card .skill-items:nth-child(6) .dots .dot.on {
+.dot.on {
   background: #0aba04;
 }
 
-.container .card .skill-items:nth-child(6) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
-}
-
-.container .card:nth-of-type(2) {
-  position: absolute;
-  top: 100px;
-  left: 700px;
-  background: rgba(255, 255, 255, 0.5);
-  width: 43%;
-  height: 80%;
-  border-radius: 20px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-.container .card:nth-of-type(2) .tool-items {
-  position: relative;
-}
-
-.container .card .tool-items .vscode {
-  width: 70px;
-  position: absolute;
-  top: 20px;
-  left: 30px;
-}
-
-.container .card .tool-items .dots {
-  position: absolute;
-  top: 40px;
-  left: 300px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card .tool-items .dots .dot.on {
-  background: #0aba04;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-}
-
-.container .card:nth-of-type(2) .tool-items .figma {
-  width: 70px;
-  position: absolute;
-  top: 140px;
-  left: -260px;
-}
-
-.container .card:nth-of-type(2) .tool-items:nth-child(2) .dots {
-  position: absolute;
-  top: 160px;
-  left: 6px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card:nth-of-type(2) .tool-items:nth-child(2) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card:nth-of-type(2) .tool-items:nth-child(2) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
-}
-
-.container .card:nth-of-type(2) .tool-items .gitbash {
-  width: 60px;
-  position: absolute;
-  top: 0;
-  left: 32px;
-}
-
-.container .card:nth-of-type(2) .tool-items:nth-child(3) .dots {
-  position: absolute;
-  top: 14px;
-  left: 300px;
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  background: rgba(250, 250, 250, 0.6);
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.5);
-  width: 210px;
-  height: 30px;
-  border-radius: 15px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.3s ease;
-}
-
-.container .card:nth-of-type(2) .tool-items:nth-child(3) .dots .dot.on {
-  background: #0aba04;
-}
-
-.container .card:nth-of-type(2) .tool-items:nth-child(3) .dots .dot {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #87f481;
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    gap: 20px;
+  }
+  .card {
+    flex-basis: 100%;
+    padding: 20px;
+  }
+  .card h2 {
+    font-size: 22px;
+  }
+  .item {
+    gap: 10px;
+  }
+  .item img {
+    width: 44px;
+    height: 44px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .dots {
+    width: 120px;
+    gap: 5px;
+  }
+  .dot {
+    width: 11px;
+    height: 11px;
+  }
 }
