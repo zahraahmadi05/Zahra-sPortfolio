@@ -105,7 +105,7 @@ body {
     font-size: 22px;
   }
   .item {
-    gap: 10px;
+    gap: 20px;
   }
   .item img {
     width: 44px;
@@ -116,7 +116,7 @@ body {
   }
   .dots {
     width: 120px;
-    gap: 5px;
+    gap: 10px;
   }
   .dot {
     width: 11px;
