@@ -203,12 +203,12 @@ header ul .resume:hover {
   header ul {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 14px 24px;
+    gap: 14px 20px;
   }
   .layout {
     flex-direction: column;
     align-items: stretch;
-    gap: 24px;
+    gap: 26px;
     padding: 24px 15px;
   }
   .content {
@@ -218,7 +218,7 @@ header ul .resume:hover {
   .icons {
     flex-direction: row;
     justify-content: center;
-    gap: 16px;
+    gap: 30px;
   }
 }
 
