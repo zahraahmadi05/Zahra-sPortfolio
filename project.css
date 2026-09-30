@@ -136,7 +136,7 @@ body {
   .card-content {
     position: static;
     transform: none;
-    padding: 0;
+    padding: 20px;
     background: none;
     overflow: visible;
   }
