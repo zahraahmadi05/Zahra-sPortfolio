@@ -13,41 +13,37 @@ body {
 }
 
 .container {
-  position: relative;
   width: calc(100% - 100px);
   height: calc(100vh - 100px);
   background-color: #fcd3a7;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
 header {
-  position: absolute;
   height: 100px;
-  top: -50px;
-  left: 20px;
-  right: 20px;
+  margin: -50px 20px 0;
+  padding: 20px 50px;
   background-color: rgba(255, 255, 255, 0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20%;
+  border-radius: 20px;
   backdrop-filter: blur(10px);
 }
 
-header img {
-  width: 36px;
-  margin-left: -42px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-header ul {
-  display: flex;
+.brand img {
+  width: 36px;
 }
 
 header .logo {
@@ -55,12 +51,16 @@ header .logo {
   font-size: 20px;
   text-decoration: none;
   font-weight: bolder;
-  position: fixed;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 48px;
 }
 
 header ul li {
   list-style: none;
-  margin: 0 24px;
 }
 
 header ul a {
@@ -122,21 +122,26 @@ header ul .resume:hover {
   transition: 0.5s;
 }
 
+.layout {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 0 30px;
+}
+
 .content {
-  position: relative;
+  flex: 1;
   background: #f5f2f2;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  width: 920px;
-  height: auto;
+  max-width: 920px;
   padding: 40px;
   border-radius: 20px;
-  opacity: 80%;
-  margin-top: 30px;
+  opacity: 0.8;
 }
 
 .content h1 {
-  position: absolute;
-  top: 20px;
   font-size: 30px;
   color: #800514;
   font-weight: 600;
@@ -144,26 +149,17 @@ header ul .resume:hover {
 
 .content p {
   font-size: 24px;
-  padding: 28px;
+  padding: 28px 0;
   line-height: 1.6;
 }
 
 .icons {
-  position: absolute;
-  top: 100px;
-  left: -20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-}
-
-.icons li {
   list-style: none;
 }
 
 .icons li a {
-  text-decoration: none;
   width: 86px;
   height: 86px;
   background-color: #fff;
@@ -176,23 +172,72 @@ header ul .resume:hover {
 }
 
 .icons li a img {
-  transform: scale(0.6);
-  width: 200px;
-  height: 150%;
+  transform: scale(0.8);
+  width: 80px;
   transition: 0.7s;
 }
 
 .icons li:hover a img {
-  transform: scale(1) rotate(360deg);
+  transform: scale(1.1) rotate(360deg);
 }
 
-.icons:nth-of-type(2) {
-  position: absolute;
-  top: 100px;
-  left: 1300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
+@media (max-width: 900px) {
+  body {
+    height: auto;
+    min-height: 100vh;
+  }
+  .container {
+    width: calc(100% - 30px);
+    height: auto;
+    min-height: calc(100vh - 100px);
+    margin: 70px 0 30px;
+    padding-bottom: 30px;
+  }
+  header {
+    height: auto;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    margin: -40px 15px 0;
+  }
+  header ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 24px;
+  }
+  .layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+    padding: 24px 15px;
+  }
+  .content {
+    max-width: 100%;
+    padding: 24px;
+  }
+  .icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  header .logo {
+    font-size: 16px;
+  }
+  .content h1 {
+    font-size: 20px;
+  }
+  .content p {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  .icons li a {
+    width: 56px;
+    height: 56px;
+  }
+  .icons li a img {
+    width: 54px;
+  }
 }
