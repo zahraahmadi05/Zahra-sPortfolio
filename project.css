@@ -7,457 +7,137 @@
 body {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   font-family: "Numans", sans-serif;
+  min-height: 100vh;
+  padding: 30px 15px;
 }
 
 .container {
-  width: 98%;
-  height: auto;
+  width: 100%;
+  max-width: 1400px;
+  padding: 30px;
   background-color: #fcd3a7;
   border-radius: 20px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: stretch;
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
 }
 
-.container .card {
+.card {
   position: relative;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.3);
-  width: 600px;
+  flex: 1 1 500px;
+  max-width: 680px;
   height: 500px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-  margin-left: 35px;
 }
 
-.container .card .linguboost {
-  position: relative;
+.card-img {
   width: 100%;
   height: 100%;
-}
-
-.container .card .linguboost .linguboost-img {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  width: 520px;
-  height: 460px;
   border-radius: 10px;
   box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
+  display: block;
 }
 
-.container .card .linguboost .linguboost-content {
+.card-content {
   position: absolute;
-  top: 0;
-  right: 100%;
+  inset: 0;
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
+  gap: 26px;
+  padding: 30px;
+  overflow-y: auto;
   background: rgba(255, 255, 255, 0.8);
+  transform: translateX(-100%);
+  transition: transform 0.5s;
 }
 
-.container .card:hover .linguboost-img {
-  transform: translateX(-500px);
+.card:hover .card-content {
+  transform: translateX(0);
 }
 
-.container .card:hover .linguboost-content {
-  left: 0;
-}
-
-.container .card .linguboost .linguboost-content h1 {
-  position: absolute;
-  top: 20px;
-  left: 10px;
+.card-content h2 {
   font-size: 20px;
   color: #620909;
   font-weight: 700;
 }
 
-.container .card .linguboost .linguboost-content p {
+.card-content h3 {
   font-size: 18px;
-  position: absolute;
-  top: 50px;
-  left: 10px;
-  line-height: 1.7;
   color: #4e0202;
   font-weight: 600;
+  margin-top: 4px;
 }
 
-.container .card .linguboost .linguboost-content .featurs {
-  position: absolute;
-  top: 114px;
-  left: 10px;
+.card-content p,
+.card-content li {
   font-size: 18px;
-  list-style: none;
   color: #4e0202;
   line-height: 1.7;
   font-weight: 600;
 }
 
-.container .card .linguboost .linguboost-content .built-with {
-  position: absolute;
-  top: 270px;
-  left: 10px;
-  font-size: 18px;
+.card-content ul {
   list-style: none;
-  color: #450202;
-  line-height: 1.7;
-  font-weight: 600;
-}
-
-.container .card .linguboost .linguboost-content .link-demo {
-  position: absolute;
-  top: 400px;
-  left: 10px;
   font-size: 18px;
-  list-style: none;
-  color: #0a6adf;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.container .card .linguboost .linguboost-content .linguboost-github {
-  position: absolute;
-  top: 440px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #02a647;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.container .card:nth-child(2) {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.3);
-  width: 700px;
-  height: 500px;
-  border-radius: 20px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container .card:nth-child(2) .snapp .snapp-img {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  width: 624px;
-  height: 460px;
-  border-radius: 10px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-
-.container .card:nth-child(2):hover .snapp-img {
-  transform: translateX(-500px);
-}
-
-.container .card:nth-child(2) .snapp .snapp-content {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.container .card:nth-child(2):hover .snapp-content {
-  left: 0;
-}
-
-.container .card:nth-child(2) .snapp .snapp-content h1 {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 20px;
-  color: #620909;
-  font-weight: 700;
-}
-
-.container .card:nth-child(2) .snapp .snapp-content p {
-  font-size: 18px;
-  position: absolute;
-  top: 80px;
-  left: 10px;
-  line-height: 1.7;
-  color: #4e0202;
+  gap: 2px;
   font-weight: 600;
 }
 
-.container .card:nth-child(2) .snapp .snapp-content .built {
-  position: absolute;
-  top: 180px;
-  left: 10px;
+.links {
+  margin-top: auto;
   font-size: 18px;
-  list-style: none;
-  color: #450202;
-  line-height: 1.7;
-  font-weight: 600;
-}
-
-.container .card:nth-child(2) .snapp .snapp-content .link-demo-snapp {
-  position: absolute;
-  top: 300px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
   color: #0a6adf;
-  line-height: 1.7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  font-weight: 600;
+}
+
+.links a {
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
 }
 
-.container .card:nth-child(2) .snapp .snapp-content .snapp-github {
-  position: absolute;
-  top: 340px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
+.links .demo {
   color: #02a647;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
 }
 
-.container .card:nth-child(3) {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.3);
-  width: 600px;
-  height: 500px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 50px;
-}
-
-.container .card:nth-child(3) .todo .todo-img {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  width: 520px;
-  height: 460px;
-  border-radius: 10px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-
-.container .card:nth-child(3):hover .todo-img {
-  transform: translateX(-500px);
-}
-
-.container .card:nth-child(3) .todo .todo-content {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.container .card:nth-child(3):hover .todo .todo-content {
-  left: 0;
-}
-
-.container .card:nth-child(3) .todo .todo-content h1 {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 20px;
-  color: #620909;
-  font-weight: 700;
-}
-
-.container .card:nth-child(3) .todo .todo-content p {
-  font-size: 18px;
-  position: absolute;
-  top: 50px;
-  left: 10px;
-  line-height: 1.7;
-  color: #4e0202;
-  font-weight: 600;
-}
-
-.container .card:nth-child(3) .todo .todo-content .todo-featurs {
-  position: absolute;
-  top: 114px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #4e0202;
-  line-height: 1.7;
-  font-weight: 600;
-}
-
-.container .card:nth-child(3) .todo .todo-content .todo-built {
-  position: absolute;
-  top: 300px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #450202;
-  line-height: 1.7;
-  font-weight: 600;
-}
-
-.container .card:nth-child(3) .todo .todo-content .todo-demo {
-  position: absolute;
-  top: 424px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #0a6adf;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.container .card:nth-child(3) .todo .todo-content .todo-github {
-  position: absolute;
-  top: 452px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
+.links .github {
   color: #02a647;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
 }
 
-.container .card:nth-child(4) {
-  position: relative;
-  overflow: hidden;
-  background: rgba(255, 255, 255, 0.3);
-  width: 700px;
-  height: 500px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-img {
-  position: absolute;
-  top: 20px;
-  left: 40px;
-  width: 624px;
-  height: 460px;
-  border-radius: 10px;
-  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
-  transition: 0.5s;
-}
-
-.container .card:nth-child(4):hover .portfilo-img {
-  transform: translateX(-500px);
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content {
-  position: absolute;
-  top: 0;
-  right: 100%;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
-}
-
-.container .card:nth-child(4):hover .portfilo-content {
-  left: 0;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content h1 {
-  position: absolute;
-  top: 20px;
-  left: 10px;
-  font-size: 20px;
-  color: #620909;
-  font-weight: 700;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content p {
-  font-size: 18px;
-  position: absolute;
-  top: 50px;
-  left: 10px;
-  line-height: 1.7;
-  color: #4e0202;
-  font-weight: 600;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content .portfilo-featur {
-  position: absolute;
-  top: 114px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #4e0202;
-  line-height: 1.7;
-  font-weight: 600;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content .portfilo-built {
-  position: absolute;
-  top: 300px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #450202;
-  line-height: 1.7;
-  font-weight: 600;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content .portfilo-demo {
-  position: absolute;
-  top: 400px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #0a6adf;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.container .card:nth-child(4) .portfilo .portfilo-content .portfilo-github {
-  position: absolute;
-  top: 436px;
-  left: 10px;
-  font-size: 18px;
-  list-style: none;
-  color: #02a647;
-  line-height: 1.7;
-  font-weight: 600;
-  text-decoration: none;
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+    gap: 20px;
+  }
+  .card {
+    flex-basis: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .card-img {
+    height: 220px;
+  }
+  .card-content {
+    position: static;
+    transform: none;
+    padding: 0;
+    background: none;
+    overflow: visible;
+  }
 }
