@@ -14,6 +14,8 @@
 
 🖼️ Interactive Project Cards
 
+📱💻 Fully responsive design
+
 ✨ Clean & Modern Design
 
 🧭 Easy Navigation
